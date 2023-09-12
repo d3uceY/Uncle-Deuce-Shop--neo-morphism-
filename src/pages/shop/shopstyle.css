@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+.product-card {
+    text-align: center;
+    border-radius: 50px;
+    background: #e0e0e0;
+    box-shadow:  5px 5px 20px #c5c5c5,
+    -5px -5px 20px #fbfbfb;
+}
+
+.product-card .product-description p:first-child {
+    font-family: monospace, sans-serif;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 1.3rem;
+}
+
+.product-image {
+    height: 300px;
+    display: block;
+    margin: 0px auto;
+    object-fit: cover;
+}
+
+h1 {
+    font-family: 'Lobster', cursive;
+}

@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root{
+  --bg: #e0e0e0;
+}
+
+
+body{
+  background: var(--bg);
+}
+
+.navigation{
+  max-width: 500px;
+  justify-content: center;
+  margin: auto;
+  gap: 20px;
+}
+
+.navigation a:first-child{
+  position: relative;
+}
+
+.navigation a:first-child:before{
+   content: '';
+   height: 2px;
+   width: 0%;
+   position: absolute;
+   left: 0px;
+   bottom: -1px;
+   background: #000;
+   transition: width 250ms ease-in;
+}
+
+.navigation a:hover:before{
+  width: 100%;
+}

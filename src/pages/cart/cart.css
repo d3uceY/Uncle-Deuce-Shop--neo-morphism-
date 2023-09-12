@@ -1,0 +1,18 @@
+.cart{
+    max-width: 600px;
+    margin: 0px auto;
+}
+
+.cart-item{
+    box-shadow:  5px 5px 20px #c5c5c5,
+    -5px -5px 20px #fbfbfb;
+}
+
+.cart-item > img{
+    width: 100px;
+}
+
+
+.description p:nth-child(1){
+    font-family: monospace;
+}
