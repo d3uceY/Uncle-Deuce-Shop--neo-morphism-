@@ -10,7 +10,7 @@ export default function Products(props) {
   const cartItemAmount = cartItems[id];
   return (
     <div className='product-card p-[20px]'>
-      <img className='product-image' src={productImage} alt={`this is ${productName}`} />
+      <img className='product-image h-[150px] md:h-[250px]' src={productImage} alt={`this is ${productName}`} />
       <div className='product-description'>
         <p>{productName}</p>
         <p>${productPrice}</p>

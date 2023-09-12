@@ -16,7 +16,6 @@
 }
 
 .product-image {
-    height: 240px;
     display: block;
     margin: 0px auto;
     object-fit: cover;
