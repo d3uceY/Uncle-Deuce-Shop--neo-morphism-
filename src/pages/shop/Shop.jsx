@@ -1,6 +1,6 @@
 import React from 'react'
 import {ProductData} from '../../ProductData'
-import Products from './products'
+import Products from './Products'
 import './shopstyle.css'
 
 export default function Shop() {
