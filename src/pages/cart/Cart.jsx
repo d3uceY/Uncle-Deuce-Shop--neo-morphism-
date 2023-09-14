@@ -12,7 +12,7 @@ export default function Cart() {
       <h2 className='text-center text-3xl font-bold mb-9 md:mb-20'>Your Cart Items</h2>
       <div className="cart-items flex flex-col gap-9">
         {ProductData.map((product) => {
-        if (cartItems !== 0){
+        if (cartItems[product.id]  !== 0){
            return <CartItem data = {product}/>
         }
         })}
@@ -31,7 +31,19 @@ const CartItem = (props) => {
       <div className='description'>
         <p className='font-bold text-lg md:text-2xl uppercase'>{productName}</p>
         <p className='text-[grey] font-medium'>${productPrice}</p>
+        <div className="count-handler">
+          <button>-</button>
+          <input type="text" />
+          <button>+</button>
+        </div>
       </div>
     </div>
   )
 }
+
+
+// const None = () => {
+//   return (
+//     <div className='align-center'>You have not added any item to cart</div>
+//   )
+// }
