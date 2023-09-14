@@ -24,17 +24,17 @@ export default function Cart() {
 
 const CartItem = (props) => {
   const { id, productPrice, productImage, productName } = props.data;
-
+  const { cartItems, addToCart, removeFromCart } = useContext(ShopContext);
   return(
     <div className='cart-item p-5 flex gap-6 justify-between items-center flex-row-reverse rounded-lg'>
       <img src = {productImage} alt = {`this is ${productImage}`} />
       <div className='description'>
         <p className='font-bold text-lg md:text-2xl uppercase'>{productName}</p>
         <p className='text-[grey] font-medium'>${productPrice}</p>
-        <div className="count-handler">
-          <button>-</button>
-          <input type="text" />
-          <button>+</button>
+        <div className="count-handler mt-3">
+          <button onClick={() => removeFromCart(id)} className='shadow-md hover:shadow-lg'>-</button>
+          <input className='text-center' type="text" value={cartItems[id]}/>
+          <button onClick={() => addToCart(id)} className='shadow-md hover:shadow-lg'>+</button>
         </div>
       </div>
     </div>

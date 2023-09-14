@@ -22,13 +22,11 @@
 }
 
 .count-handler button {
-    background: #e0e0e0;
-    box-shadow:  16px 16px 32px #9d9d9d,
-    -16px -16px 32px #ffffff;
     height: 25px;
     width: 25px;
 }
 
 .count-handler input {
     width: 40px;
+    pointer-events: none;
 }
