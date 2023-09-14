@@ -30,3 +30,14 @@
     width: 40px;
     pointer-events: none;
 }
+
+.checkout{
+    max-width: 300px;
+}
+
+.checkout div button{
+    background: #000;
+    color: white;
+    font-weight: 600;
+    transition: all 200ms ease-in;
+}

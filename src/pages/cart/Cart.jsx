@@ -2,11 +2,12 @@ import React from 'react'
 import { useContext } from 'react';
 import { ProductData } from '../../ProductData'
 import { ShopContext } from '../../context/Shopcontext'
+import { Link } from 'react-router-dom';
 import './cart.css'
 
 export default function Cart() {
-  const { cartItems } = useContext(ShopContext);
-
+  const { cartItems, getTotalCartAmount } = useContext(ShopContext);
+  const totalAmount = getTotalCartAmount();
   return (
     <div className="cart mb-[4rem] md:mb-[8rem] px-8">
       <h2 className='text-center text-3xl font-bold mb-9 md:mb-20'>Your Cart Items</h2>
@@ -16,6 +17,14 @@ export default function Cart() {
            return <CartItem data = {product}/>
         }
         })}
+      </div>
+
+      <div className="checkout mx-auto">
+        <p className='font-bold'>Subtotal: ${totalAmount}</p>
+        <div className='flex justify-between'>
+        <button className='py-2 px-3 hover:bg-white hover:text-black hover:rounded-md rounded-sm'><Link to='/'>Continue Shopping</Link></button>
+        <button className='py-2 px-3 hover:bg-white hover:text-black hover:rounded-md rounded-sm'>Checkout</button>
+        </div>
       </div>
     </div>
   )
