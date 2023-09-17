@@ -19,7 +19,7 @@ export default function Cart() {
         })}
       </div>
 
-      <div className="checkout mx-auto">
+      <div className="checkout mx-auto mt-8">
         <p className='font-bold'>Subtotal: ${totalAmount}</p>
         <div className='flex justify-between'>
         <button className='py-2 px-3 hover:bg-white hover:text-black hover:rounded-md rounded-sm'><Link to='/'>Continue Shopping</Link></button>
@@ -51,8 +51,3 @@ const CartItem = (props) => {
 }
 
 
-// const None = () => {
-//   return (
-//     <div className='align-center'>You have not added any item to cart</div>
-//   )
-// }
