@@ -1,4 +1,5 @@
 import React from 'react'
+import { motion } from 'framer-motion';
 import { useContext } from 'react';
 import { ShopContext } from '../../context/Shopcontext'
 

@@ -22,17 +22,3 @@ body{
   position: relative;
 }
 
-.navigation a:first-child:before{
-   content: '';
-   height: 2px;
-   width: 0%;
-   position: absolute;
-   left: 0px;
-   bottom: -1px;
-   background: #000;
-   transition: width 250ms ease-in;
-}
-
-.navigation a:hover:before{
-  width: 100%;
-}
