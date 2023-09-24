@@ -53,6 +53,24 @@ const cartSectionButtonVariants = {
   }
 }
 
+
+
+// product variants
+// const productsContainer = {
+//   hidden: { opacity: 0 },
+//   show: {
+//     opacity: 1,
+//     transition: {
+//       staggerChildren: 0.5
+//     }
+//   }
+// };
+
+// const productListItem = {
+//   hidden: { opacity: 0 },
+//   show: { opacity: 1 }
+// };
+
 export default function Shop() {
 
   return (
