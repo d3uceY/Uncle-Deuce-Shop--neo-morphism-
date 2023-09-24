@@ -16,20 +16,20 @@ const linkVariants = {
 
 export default function Navbar() {
   return (
-    <nav className='Navbar py-[30px] drop-shadow-lg border'>
+    <nav className='Navbar py-2 md:py-[30px] drop-shadow-lg border'>
       <ul className="navigation flex items-center">
         <Link to='/'><motion.p
           variants={linkVariants}
           initial="hidden"
           animate="visible"
-          transition={{ type: 'spring', stiffness: 110 }}>Shop</motion.p>
+          transition={{ type: 'spring', stiffness: 80 }}>Shop</motion.p>
         </Link>
         <Link to='/cart'>
           <motion.p
             variants={linkVariants}
             initial="hidden"
             animate="visible"
-            transition={{ delay: 0.4, type: 'spring', stiffness: 110 }}>
+            transition={{ delay: 0.4, type: 'spring', stiffness: 80 }}>
             <FaShoppingCart /></motion.p>
         </Link>
       </ul>

@@ -64,3 +64,10 @@
 h1 {
     font-family: 'Lobster', sans-serif;
 }
+
+.cartArrowDown{
+    margin: 0px auto;
+    display: block;
+    width: fit-content;
+}
+
