@@ -7,7 +7,7 @@ import { ShopContext } from '../../context/Shopcontext'
 export default function Products(props) {
   const { id, productPrice, productImage, productName } = props.data;
   const { addToCart, cartItems } = useContext(ShopContext);
-
+ 
   const cartItemAmount = cartItems[id];
   return (
     <div className='product-card p-[20px]'>
