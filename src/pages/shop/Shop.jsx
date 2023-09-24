@@ -1,7 +1,6 @@
 import { React } from 'react'
 import { ProductData } from '../../ProductData'
 import { motion } from 'framer-motion'
-import { FaCartArrowDown } from 'react-icons/fa'
 import Products from './Products'
 import apple from '../../assets/HomepageImages/apple.png'
 import blackshirt from '../../assets/HomepageImages/blackshirt.png'
@@ -39,9 +38,9 @@ const rightAnimationVariants = {
 }
 
 
-const cartSectionButtonVariants = {
+const goToShop = {
   hidden: {
-    opacity: 0, scale: 1.1 
+    opacity: 0, scale: 1.4
   },
 
   visible: {
@@ -52,24 +51,6 @@ const cartSectionButtonVariants = {
     }
   }
 }
-
-
-
-// product variants
-// const productsContainer = {
-//   hidden: { opacity: 0 },
-//   show: {
-//     opacity: 1,
-//     transition: {
-//       staggerChildren: 0.5
-//     }
-//   }
-// };
-
-// const productListItem = {
-//   hidden: { opacity: 0 },
-//   show: { opacity: 1 }
-// };
 
 export default function Shop() {
 
@@ -85,15 +66,15 @@ export default function Shop() {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 2.5, duration: .3, stiffness: 130, type: 'spring' }}
             className='text-center text-[3rem]  sm:text-[5rem] mb-4 md:mb-[5rem]'>Shopping with Deuce.</motion.h1>
-          <div className='cartArrowDown text-[3rem] md:text-[4rem]'>
-            <a href="#shop">
-              <motion.i
-                variants={cartSectionButtonVariants}
-                initial="hidden"
-                animate="visible"> <FaCartArrowDown /></motion.i>
-            </a>
-          </div>
-
+          <motion.a href="#shop" className='goToShop'
+          variants={goToShop}
+          initial = 'hidden'
+          animate = 'visible'
+          >
+            <div className='cartArrowDown text-[3rem] md:text-[4rem]'>
+              <div className='triangle'></div>
+            </div>
+          </motion.a>
         </div>
       </div>
       <div id='shop' className="products grid lg:grid-cols-2 xl:grid-cols-3 px-8  gap-5 container mx-auto">
