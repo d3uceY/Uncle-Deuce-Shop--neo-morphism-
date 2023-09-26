@@ -44,11 +44,12 @@ const rightAnimationVariants = {
 
 const goToShop = {
   hidden: {
-    opacity: 0, scale: 1.4
+    opacity: 0,
   },
 
   visible: {
-    opacity: 1, scale: 1,
+    opacity: 1,
+    y: [0, -10, 10, -10, 0, -10, 10, 0],
     transition: {
       duration: 1,
       delay: 3
@@ -56,6 +57,7 @@ const goToShop = {
   },
   touch: {
     backgroundColor: "#939597",
+    y: [0, -10, 10, -10, 0, -10, 10, 0],
     transtion: {
       duration: 1
     }
