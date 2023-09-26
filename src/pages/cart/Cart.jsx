@@ -9,7 +9,7 @@ export default function Cart() {
   const { cartItems, getTotalCartAmount } = useContext(ShopContext);
   const totalAmount = getTotalCartAmount();
   return (
-    <div className="cart mb-[4rem] md:mb-[8rem] px-8">
+    <div className="cart my-[4rem] md:my-[8rem] px-8">
       <h2 className='text-center text-3xl font-bold mb-9 md:mb-20'>Your Cart Items</h2>
       <div className="cart-items flex flex-col gap-9">
         {ProductData.map((product) => {
