@@ -2,6 +2,8 @@
 
 .shop{
     overflow: hidden;
+    background: url(../../assets/HomepageImages/hero-bg.svg);
+    background-size: cover;
 }
 
 .shop-hero{
