@@ -12,7 +12,9 @@ html {
 
 
 body {
-  background: var(--bg);
+  background: var(--bg) url(/src/assets/HomepageImages/hero-bg.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 
