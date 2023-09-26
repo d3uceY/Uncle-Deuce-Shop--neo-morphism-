@@ -16,7 +16,7 @@ const linkVariants = {
 
 export default function Navbar() {
   return (
-    <nav className='Navbar py-2 md:py-[30px] drop-shadow-lg border'>
+    <nav className='Navbar py-4 md:py-[30px] drop-shadow-lg border'>
       <ul className="navigation flex items-center">
         <Link to='/'><motion.p
           variants={linkVariants}
