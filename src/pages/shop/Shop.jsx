@@ -65,8 +65,8 @@ const goToShop = {
 export default function Shop() {
 
   return (
-    <div className=' container mx-auto shop pb-[4rem] md:pb-[8rem]'>
-      <div className='shop-hero'>
+    <div className='shop pb-[4rem] md:pb-[8rem]'>
+      <div className=' container mx-auto shop-hero'>
         <motion.img variants={leftImageAnimationVariants} initial="hidden" animate="visible" className='apple' src={apple} alt={`this is a ${apple}`} />
         <motion.img variants={rightAnimationVariants} initial="hidden" animate="visible" className='blackshirt' src={blackshirt} alt={`this is a ${blackshirt}`} />
         <motion.img variants={rightAnimationVariants} initial="hidden" animate="visible" className='pricetag' src={pricetag} alt={`this is a ${pricetag}`} />
