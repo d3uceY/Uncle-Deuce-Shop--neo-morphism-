@@ -11,10 +11,12 @@ import './shopstyle.css'
 const leftImageAnimationVariants = {
   hidden: {
     left: '-100vh',
+    rotate: -180
   },
 
   visible: {
     left: 0,
+    rotate: 45,
     transition: {
       type: 'spring',
       stiffness: 100,
@@ -25,10 +27,12 @@ const leftImageAnimationVariants = {
 
 const rightAnimationVariants = {
   hidden: {
-    right: '-100vh'
+    right: '-100vh',
+    rotate: 180,
   },
   visible: {
     right: 0,
+    rotate: 0,
     transition: {
       type: 'spring',
       stiffness: 100,
