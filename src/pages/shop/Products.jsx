@@ -3,6 +3,18 @@ import { motion } from 'framer-motion';
 import { useContext } from 'react';
 import { ShopContext } from '../../context/Shopcontext'
 
+const productCardVariants = {
+  hidden: {
+    opacity: 0
+  },
+  visible: {
+    opacity: 1,
+    transition: {
+      duration: 0.5
+    }
+  }
+}
+
 
 export default function Products(props) {
   const { id, productPrice, productImage, productName } = props.data;
@@ -10,7 +22,7 @@ export default function Products(props) {
  
   const cartItemAmount = cartItems[id];
   return (
-    <div className='product-card p-[20px]'>
+    <motion.div variants={productCardVariants}  className='product-card p-[20px]'>
       <img className='product-image h-[150px] md:h-[250px]' src={productImage} alt={`this is ${productName}`} />
       <div className='product-description'>
         <p>{productName}</p>
@@ -19,6 +31,6 @@ export default function Products(props) {
           Add to Cart  {cartItemAmount > 0 && <> ({cartItemAmount}) </>}
         </button>
       </div>
-    </div>
+    </motion.div>
   )
 }

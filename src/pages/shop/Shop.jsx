@@ -64,6 +64,21 @@ const goToShop = {
   }
 }
 
+
+const productContainerVariants = {
+  hidden: {
+    opacity: 0
+  },
+  visible: {
+    opacity: 1,
+    transition: {
+      duration: 0.2,
+      when: 'beforeChildren',
+      staggerChildren: 0.4
+    }
+  }
+}
+
 export default function Shop() {
 
   return (
@@ -89,11 +104,15 @@ export default function Shop() {
           </motion.a>
         </div>
       </div>
-      <div id='shop' className="products grid lg:grid-cols-2 xl:grid-cols-3 px-8  gap-5 container mx-auto">
+      <motion.div 
+      variants={productContainerVariants}
+      initial = 'hidden'
+      animate = 'visible'
+      id='shop' className="products grid lg:grid-cols-2 xl:grid-cols-3 px-8  gap-5 container mx-auto">
         {ProductData.map((product) =>
-          <Products data={product} />
+          <Products key = {product.id} data={product} />
         )}
-      </div>
+      </motion.div>
     </div>
   )
 }
