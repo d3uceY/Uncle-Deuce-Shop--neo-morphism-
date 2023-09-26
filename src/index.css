@@ -25,9 +25,3 @@ body{
 .navigation a:first-child{
   position: relative;
 }
-
-.navigation p:hover{
-  scale: 1.1;
-  font-weight: 600;
-}
-
