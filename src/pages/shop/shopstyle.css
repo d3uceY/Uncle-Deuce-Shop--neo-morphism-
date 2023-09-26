@@ -89,6 +89,11 @@ h1 {
     overflow-y: hidden;
  }
 
+ a, button, input, select {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  }
+  
+
  @keyframes myAnim {
 	0% {
 		animation-timing-function: ease-in;
