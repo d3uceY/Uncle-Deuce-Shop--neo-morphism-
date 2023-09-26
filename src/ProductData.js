@@ -3,6 +3,9 @@ import cap from './assets/cap.png'
 import boxes from './assets/boxes.png'
 import glasses from './assets/glasses.png'
 import macbook from './assets/macbook.png'
+import apples from './assets/HomepageImages/apple.png'
+import shirt from './assets/HomepageImages/blackshirt.png'
+import bag from './assets/HomepageImages/shoppingbag.png'
 
 export const ProductData = [
     {
@@ -34,5 +37,23 @@ export const ProductData = [
         productName: 'macbook',
         productPrice: 600,
         productImage: macbook
+    },
+    {
+        id: 6,
+        productName: 'Basket of Apples',
+        productPrice: 9000,
+        productImage: apples
+    },
+    {
+        id: 7,
+        productName: 'Random Black Shirt',
+        productPrice: 60,
+        productImage: shirt
+    },
+    {
+        id: 8,
+        productName: 'Pluh bag',
+        productPrice: 60,
+        productImage: bag
     }
 ]

@@ -59,7 +59,7 @@ const goToShop = {
     backgroundColor: "#939597",
     y: [0, -10, 10, -10, 0, -10, 10, 0],
     transtion: {
-      duration: 1
+      duration: 1 
     }
   }
 }
@@ -72,7 +72,7 @@ const productContainerVariants = {
   visible: {
     opacity: 1,
     transition: {
-      duration: 0.2,
+      duration: 0.2 ,
       when: 'beforeChildren',
       staggerChildren: 0.4
     }
