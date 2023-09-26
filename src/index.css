@@ -6,13 +6,10 @@ html {
   scroll-behavior: smooth;
 }
 
-:root {
-  --bg: #e0e0e0;
-}
 
 
 body {
-  background: var(--bg) url(/src/assets/HomepageImages/hero-bg.svg);
+  background: url(/src/assets/HomepageImages/hero-bg.svg);
   background-repeat: no-repeat;
   background-size: cover;
 }
