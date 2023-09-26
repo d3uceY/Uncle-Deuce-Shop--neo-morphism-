@@ -81,9 +81,9 @@ export default function Shop() {
             initial='hidden'
             animate='visible'
           >
-            <motion.div variants={goToShop} whileHover='touch' className='cartArrowDown text-[3rem] md:text-[4rem]'>
+            <motion.button variants={goToShop} whileHover='touch' className='cartArrowDown text-[3rem] md:text-[4rem]'>
               <div className='triangle'></div>
-            </motion.div>
+            </motion.button>
           </motion.a>
         </div>
       </div>
