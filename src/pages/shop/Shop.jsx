@@ -53,6 +53,12 @@ const goToShop = {
       duration: 1,
       delay: 3
     }
+  },
+  touch: {
+    backgroundColor: "#939597",
+    transtion: {
+      duration: 1
+    }
   }
 }
 
@@ -71,13 +77,13 @@ export default function Shop() {
             transition={{ delay: 2.5, duration: .3, stiffness: 130, type: 'spring' }}
             className='text-center text-[3rem]  sm:text-[5rem] mb-4 md:mb-[5rem]'>Shopping with Deuce.</motion.h1>
           <motion.a href="#shop" className='goToShop'
-          variants={goToShop}
-          initial = 'hidden'
-          animate = 'visible'
+            variants={goToShop}
+            initial='hidden'
+            animate='visible'
           >
-            <div className='cartArrowDown text-[3rem] md:text-[4rem]'>
+            <motion.div variants={goToShop} whileHover='touch' className='cartArrowDown text-[3rem] md:text-[4rem]'>
               <div className='triangle'></div>
-            </div>
+            </motion.div>
           </motion.a>
         </div>
       </div>
