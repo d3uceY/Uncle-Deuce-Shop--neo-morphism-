@@ -6,11 +6,11 @@ import { ShopContext } from '../../context/Shopcontext'
 const productCardVariants = {
   hidden: {
     opacity: 0
-  },
+  }, 
   visible: {
     opacity: 1,
     transition: {
-      duration: 0.5
+      duration: 0.4
     }
   }
 }
@@ -22,7 +22,7 @@ export default function Products(props) {
  
   const cartItemAmount = cartItems[id];
   return (
-    <motion.div variants={productCardVariants}  className='product-card p-[20px]'>
+    <motion.div variants={productCardVariants}   className='product-card p-[20px]'>
       <img className='product-image h-[150px] md:h-[250px]' src={productImage} alt={`this is ${productName}`} />
       <div className='product-description'>
         <p>{productName}</p>

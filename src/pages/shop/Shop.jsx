@@ -1,6 +1,7 @@
 import { React } from 'react'
 import { ProductData } from '../../ProductData'
 import { motion } from 'framer-motion'
+import { useInView } from 'react-intersection-observer'
 import Products from './Products'
 import apple from '../../assets/HomepageImages/apple.png'
 import blackshirt from '../../assets/HomepageImages/blackshirt.png'
@@ -59,7 +60,7 @@ const goToShop = {
     backgroundColor: "#939597",
     y: [0, -10, 10, -10, 0, -10, 10, 0],
     transtion: {
-      duration: 1 
+      duration: 1
     }
   }
 }
@@ -72,7 +73,7 @@ const productContainerVariants = {
   visible: {
     opacity: 1,
     transition: {
-      duration: 0.2 ,
+      duration: 0.2,
       when: 'beforeChildren',
       staggerChildren: 0.4
     }
@@ -80,6 +81,10 @@ const productContainerVariants = {
 }
 
 export default function Shop() {
+  const [ref, inView] = useInView({
+    triggerOnce : true
+  })
+
 
   return (
     <div className='shop py-[4rem] md:py-[8rem]'>
@@ -104,13 +109,14 @@ export default function Shop() {
           </motion.a>
         </div>
       </div>
-      <motion.div 
-      variants={productContainerVariants}
-      initial = 'hidden'
-      animate = 'visible'
-      id='shop' className="products grid lg:grid-cols-2 xl:grid-cols-3 px-8  gap-5 container mx-auto">
+      <motion.div
+        variants={productContainerVariants}
+        ref={ref}
+        initial='hidden'
+        animate= {inView ? 'visible' : 'hidden'}
+        id='shop' className="products grid lg:grid-cols-2 xl:grid-cols-3 px-8  gap-5 container mx-auto">
         {ProductData.map((product) =>
-          <Products key = {product.id} data={product} />
+          <Products key={product.id} data={product} />
         )}
       </motion.div>
     </div>
