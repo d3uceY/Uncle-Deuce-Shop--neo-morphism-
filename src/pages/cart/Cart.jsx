@@ -47,12 +47,17 @@ export default function Cart() {
       <div className="cart py-[4rem] md:py-[8rem] px-8">
         <h2 className='text-center text-3xl font-bold mb-9 md:mb-20'>Your Cart Items</h2>
         <div className="cart-items flex flex-col gap-9">
-          {ProductData.map((product) => {
-            if (cartItems[product.id] !== 0) {
-              return <CartItem data={product} />
-            }
-          })}
+          {Object.values(cartItems).some(item => item !== 0) ? (
+            ProductData.map((product) => {
+              if (cartItems[product.id] !== 0) {
+                return <CartItem data={product} />
+              }
+            })
+          ) : (
+            <p className='text-center'>No cart items ಠ_ಠ</p>
+          )}
         </div>
+
 
         <div className="checkout mx-auto mt-8">
           <p className='font-bold'>Subtotal: ${totalAmount}</p>
